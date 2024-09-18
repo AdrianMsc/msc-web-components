@@ -1,0 +1,13 @@
+{
+  "entries": [
+    "components/msc-drawer/msc-drawer.js",
+    "components/msc-hello/msc-hello.js"
+  ],
+  "compiler": {
+    "name": "@stencil/core",
+    "version": "4.19.2",
+    "typescriptVersion": "5.4.5"
+  },
+  "collections": [],
+  "bundles": []
+}
