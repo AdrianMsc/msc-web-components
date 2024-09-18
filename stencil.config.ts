@@ -23,7 +23,9 @@ export const config: Config = {
     },
     {
       type: 'www',
+      dir: 'dist',
       serviceWorker: null,
+      prerenderConfig: './prerender.config.ts',
     },
   ],
   testing: {
