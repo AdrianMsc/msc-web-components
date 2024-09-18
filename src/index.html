@@ -8,6 +8,26 @@
     <script nomodule src="/build/msc-ds-wc.js"></script>
   </head>
   <body>
-    <side-nav></side-nav>
+    <msc-drawer id="drawer-main">
+      <h1>revenew</h1>
+    </msc-drawer>
+
+    <script>
+      const drawerMain = document.getElementById('drawer-main');
+
+      drawerMain.items = [
+        {
+          category: 'Action',
+          pages: [
+            { href: 'buttons.html', text: 'Buttons' },
+            { href: 'drop-down.html', text: 'Drop Down' },
+            { href: 'filter.html', text: 'Filter' },
+            { href: 'link.html', text: 'Link' },
+            { href: 'cart-action-bar.html', text: 'Cart Action Bar' },
+            { href: 'tabs.html', text: 'Tabs' },
+          ],
+        },
+      ];
+    </script>
   </body>
 </html>

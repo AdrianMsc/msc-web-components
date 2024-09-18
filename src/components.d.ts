@@ -6,32 +6,51 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface SideNav {
+    interface MscDrawer {
+        "items": any;
+        "logo": string;
+        "navTitle": string;
+    }
+    interface MscHello {
     }
 }
 declare global {
-    interface HTMLSideNavElement extends Components.SideNav, HTMLStencilElement {
+    interface HTMLMscDrawerElement extends Components.MscDrawer, HTMLStencilElement {
     }
-    var HTMLSideNavElement: {
-        prototype: HTMLSideNavElement;
-        new (): HTMLSideNavElement;
+    var HTMLMscDrawerElement: {
+        prototype: HTMLMscDrawerElement;
+        new (): HTMLMscDrawerElement;
+    };
+    interface HTMLMscHelloElement extends Components.MscHello, HTMLStencilElement {
+    }
+    var HTMLMscHelloElement: {
+        prototype: HTMLMscHelloElement;
+        new (): HTMLMscHelloElement;
     };
     interface HTMLElementTagNameMap {
-        "side-nav": HTMLSideNavElement;
+        "msc-drawer": HTMLMscDrawerElement;
+        "msc-hello": HTMLMscHelloElement;
     }
 }
 declare namespace LocalJSX {
-    interface SideNav {
+    interface MscDrawer {
+        "items"?: any;
+        "logo"?: string;
+        "navTitle"?: string;
+    }
+    interface MscHello {
     }
     interface IntrinsicElements {
-        "side-nav": SideNav;
+        "msc-drawer": MscDrawer;
+        "msc-hello": MscHello;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "side-nav": LocalJSX.SideNav & JSXBase.HTMLAttributes<HTMLSideNavElement>;
+            "msc-drawer": LocalJSX.MscDrawer & JSXBase.HTMLAttributes<HTMLMscDrawerElement>;
+            "msc-hello": LocalJSX.MscHello & JSXBase.HTMLAttributes<HTMLMscHelloElement>;
         }
     }
 }
