@@ -14,6 +14,7 @@ export namespace Components {
     interface MscHello {
     }
     interface MscTable {
+        "comps": any[];
     }
 }
 declare global {
@@ -50,6 +51,7 @@ declare namespace LocalJSX {
     interface MscHello {
     }
     interface MscTable {
+        "comps"?: any[];
     }
     interface IntrinsicElements {
         "msc-drawer": MscDrawer;

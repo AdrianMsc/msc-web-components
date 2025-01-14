@@ -1,5 +1,5 @@
-import { Component, h } from '@stencil/core';
-import { components } from './constants';
+import { Component, h, Prop } from '@stencil/core';
+import { spinner } from './constants';
 
 @Component({
   tag: 'msc-table',
@@ -7,12 +7,16 @@ import { components } from './constants';
   shadow: true,
 })
 export class MscTable {
-  comps = components;
+  svg = spinner;
+
+  @Prop() comps: any[] = [];
 
   render() {
     return (
       <div class="container">
         <h1>Component Status</h1>
+
+        {this.comps.length > 0 ? '' : <div innerHTML={this.svg}></div>}
 
         {this.comps.map(category => (
           <div key={category.category}>

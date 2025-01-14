@@ -8,7 +8,27 @@
     <script nomodule src="/build/msc-ds-wc.js"></script>
   </head>
   <body>
-    <msc-table></msc-table>
+    <msc-table id="mscTable"></msc-table>
+
+    <script>
+      getTableData = () => {
+        fetch('https://msc-component-status-ws.onrender.com/components/')
+          .then(response => response.json())
+          .then(data => {
+            const mscTable = document.getElementById('mscTable');
+            mscTable.comps = null;
+            mscTable.comps = data;
+            console.log('Fetched', data);
+          })
+          .catch(error => {
+            console.error('Error fetching components:', error);
+          });
+      };
+
+      document.addEventListener('DOMContentLoaded', function () {
+        getTableData();
+      });
+    </script>
 
     <!-- <msc-drawer id="drawer-main">
       <h1>revenew</h1>
