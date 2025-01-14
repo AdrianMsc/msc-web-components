@@ -1,7 +1,8 @@
 {
   "entries": [
     "components/msc-drawer/msc-drawer.js",
-    "components/msc-hello/msc-hello.js"
+    "components/msc-hello/msc-hello.js",
+    "components/msc-table/msc-table.js"
   ],
   "compiler": {
     "name": "@stencil/core",
