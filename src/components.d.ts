@@ -13,6 +13,8 @@ export namespace Components {
     }
     interface MscHello {
     }
+    interface MscTable {
+    }
 }
 declare global {
     interface HTMLMscDrawerElement extends Components.MscDrawer, HTMLStencilElement {
@@ -27,9 +29,16 @@ declare global {
         prototype: HTMLMscHelloElement;
         new (): HTMLMscHelloElement;
     };
+    interface HTMLMscTableElement extends Components.MscTable, HTMLStencilElement {
+    }
+    var HTMLMscTableElement: {
+        prototype: HTMLMscTableElement;
+        new (): HTMLMscTableElement;
+    };
     interface HTMLElementTagNameMap {
         "msc-drawer": HTMLMscDrawerElement;
         "msc-hello": HTMLMscHelloElement;
+        "msc-table": HTMLMscTableElement;
     }
 }
 declare namespace LocalJSX {
@@ -40,9 +49,12 @@ declare namespace LocalJSX {
     }
     interface MscHello {
     }
+    interface MscTable {
+    }
     interface IntrinsicElements {
         "msc-drawer": MscDrawer;
         "msc-hello": MscHello;
+        "msc-table": MscTable;
     }
 }
 export { LocalJSX as JSX };
@@ -51,6 +63,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "msc-drawer": LocalJSX.MscDrawer & JSXBase.HTMLAttributes<HTMLMscDrawerElement>;
             "msc-hello": LocalJSX.MscHello & JSXBase.HTMLAttributes<HTMLMscHelloElement>;
+            "msc-table": LocalJSX.MscTable & JSXBase.HTMLAttributes<HTMLMscTableElement>;
         }
     }
 }
