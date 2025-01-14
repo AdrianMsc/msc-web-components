@@ -1,15 +1,5 @@
 export declare class MscTable {
-    comps: {
-        category: string;
-        components: {
-            name: string;
-            statuses: {
-                platform: string;
-                status: string;
-            }[];
-            comment: string;
-            id: number;
-        }[];
-    }[];
+    svg: string;
+    comps: any[];
     render(): any;
 }

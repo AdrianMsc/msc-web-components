@@ -16,7 +16,7 @@ var patchBrowser = () => {
 
 patchBrowser().then(async (options) => {
   await globalScripts();
-  return bootstrapLazy([["msc-drawer",[[1,"msc-drawer",{"navTitle":[1,"nav-title"],"items":[8],"logo":[1],"isSideNavOpen":[32]}]]],["msc-hello",[[1,"msc-hello"]]],["msc-table",[[1,"msc-table"]]]], options);
+  return bootstrapLazy([["msc-drawer",[[1,"msc-drawer",{"navTitle":[1,"nav-title"],"items":[8],"logo":[1],"isSideNavOpen":[32]}]]],["msc-hello",[[1,"msc-hello"]]],["msc-table",[[1,"msc-table",{"comps":[16]}]]]], options);
 });
 
 //# sourceMappingURL=msc-ds-wc.js.map
